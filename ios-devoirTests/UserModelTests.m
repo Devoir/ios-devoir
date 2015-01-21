@@ -45,7 +45,6 @@
 - (void)testGetEmail {
     UserModel* userModel = [[UserModel alloc] initWithDatabase:@"devoirTest.sqlite"];
     XCTAssertEqualObjects([userModel getEmail], @"thecount@montecristo.com");
-    NSLog(@"\n\nLOOK: %@\n\n", [userModel getEmail]);
     
     UserModel* failModel = [[UserModel alloc] initWithDatabase:@"NONE"];
     XCTAssertEqualObjects([failModel getEmail], NULL);
