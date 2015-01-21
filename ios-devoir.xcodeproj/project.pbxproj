@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EB0840F1A6F392000FD5031 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB0840E1A6F392000FD5031 /* UserModel.m */; };
 		4EFD546B1A6F217900FCFB7C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFD546A1A6F217900FCFB7C /* main.m */; };
 		4EFD546E1A6F217900FCFB7C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFD546D1A6F217900FCFB7C /* AppDelegate.m */; };
-		4EFD54711A6F217900FCFB7C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFD54701A6F217900FCFB7C /* ViewController.m */; };
 		4EFD54741A6F217900FCFB7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EFD54721A6F217900FCFB7C /* Main.storyboard */; };
 		4EFD54761A6F217900FCFB7C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EFD54751A6F217900FCFB7C /* Images.xcassets */; };
 		4EFD54791A6F217900FCFB7C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EFD54771A6F217900FCFB7C /* LaunchScreen.xib */; };
-		4EFD54851A6F217900FCFB7C /* ios_devoirTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFD54841A6F217900FCFB7C /* ios_devoirTests.m */; };
+		4EFD54851A6F217900FCFB7C /* UserModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFD54841A6F217900FCFB7C /* UserModelTests.m */; };
+		4EFD548F1A6F295A00FCFB7C /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EFD548E1A6F295A00FCFB7C /* libsqlite3.0.dylib */; };
+		4EFD54911A6F314800FCFB7C /* devoirTest.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 4EFD54901A6F314800FCFB7C /* devoirTest.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +29,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4EB0840D1A6F392000FD5031 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		4EB0840E1A6F392000FD5031 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		4EFD54651A6F217900FCFB7C /* ios-devoir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-devoir.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EFD54691A6F217900FCFB7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EFD546A1A6F217900FCFB7C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4EFD546C1A6F217900FCFB7C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4EFD546D1A6F217900FCFB7C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4EFD546F1A6F217900FCFB7C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4EFD54701A6F217900FCFB7C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4EFD54731A6F217900FCFB7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4EFD54751A6F217900FCFB7C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4EFD54781A6F217900FCFB7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4EFD547E1A6F217900FCFB7C /* ios-devoirTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-devoirTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EFD54831A6F217900FCFB7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4EFD54841A6F217900FCFB7C /* ios_devoirTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ios_devoirTests.m; sourceTree = "<group>"; };
+		4EFD54841A6F217900FCFB7C /* UserModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModelTests.m; sourceTree = "<group>"; };
+		4EFD548E1A6F295A00FCFB7C /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		4EFD54901A6F314800FCFB7C /* devoirTest.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = devoirTest.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EFD548F1A6F295A00FCFB7C /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,11 +65,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4EB084111A6F4DE600FD5031 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EFD548E1A6F295A00FCFB7C /* libsqlite3.0.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4EFD545C1A6F217900FCFB7C = {
 			isa = PBXGroup;
 			children = (
 				4EFD54671A6F217900FCFB7C /* ios-devoir */,
 				4EFD54811A6F217900FCFB7C /* ios-devoirTests */,
+				4EB084111A6F4DE600FD5031 /* Frameworks */,
 				4EFD54661A6F217900FCFB7C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,14 +95,16 @@
 		4EFD54671A6F217900FCFB7C /* ios-devoir */ = {
 			isa = PBXGroup;
 			children = (
+				4EFD54771A6F217900FCFB7C /* LaunchScreen.xib */,
+				4EFD54721A6F217900FCFB7C /* Main.storyboard */,
 				4EFD546C1A6F217900FCFB7C /* AppDelegate.h */,
 				4EFD546D1A6F217900FCFB7C /* AppDelegate.m */,
-				4EFD546F1A6F217900FCFB7C /* ViewController.h */,
-				4EFD54701A6F217900FCFB7C /* ViewController.m */,
-				4EFD54721A6F217900FCFB7C /* Main.storyboard */,
-				4EFD54751A6F217900FCFB7C /* Images.xcassets */,
-				4EFD54771A6F217900FCFB7C /* LaunchScreen.xib */,
+				4EFD54921A6F326800FCFB7C /* Models */,
+				4EFD54931A6F327800FCFB7C /* Views */,
+				4EFD54941A6F328800FCFB7C /* Controllers */,
 				4EFD54681A6F217900FCFB7C /* Supporting Files */,
+				4EFD54901A6F314800FCFB7C /* devoirTest.sqlite */,
+				4EFD54751A6F217900FCFB7C /* Images.xcassets */,
 			);
 			path = "ios-devoir";
 			sourceTree = "<group>";
@@ -105,7 +121,7 @@
 		4EFD54811A6F217900FCFB7C /* ios-devoirTests */ = {
 			isa = PBXGroup;
 			children = (
-				4EFD54841A6F217900FCFB7C /* ios_devoirTests.m */,
+				4EFD54841A6F217900FCFB7C /* UserModelTests.m */,
 				4EFD54821A6F217900FCFB7C /* Supporting Files */,
 			);
 			path = "ios-devoirTests";
@@ -117,6 +133,29 @@
 				4EFD54831A6F217900FCFB7C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4EFD54921A6F326800FCFB7C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4EB0840D1A6F392000FD5031 /* UserModel.h */,
+				4EB0840E1A6F392000FD5031 /* UserModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		4EFD54931A6F327800FCFB7C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		4EFD54941A6F328800FCFB7C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +240,7 @@
 			files = (
 				4EFD54741A6F217900FCFB7C /* Main.storyboard in Resources */,
 				4EFD54791A6F217900FCFB7C /* LaunchScreen.xib in Resources */,
+				4EFD54911A6F314800FCFB7C /* devoirTest.sqlite in Resources */,
 				4EFD54761A6F217900FCFB7C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,9 +259,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EFD54711A6F217900FCFB7C /* ViewController.m in Sources */,
 				4EFD546E1A6F217900FCFB7C /* AppDelegate.m in Sources */,
 				4EFD546B1A6F217900FCFB7C /* main.m in Sources */,
+				4EB0840F1A6F392000FD5031 /* UserModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,7 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EFD54851A6F217900FCFB7C /* ios_devoirTests.m in Sources */,
+				4EFD54851A6F217900FCFB7C /* UserModelTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +452,7 @@
 				4EFD548A1A6F217900FCFB7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4EFD548B1A6F217900FCFB7C /* Build configuration list for PBXNativeTarget "ios-devoirTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +461,7 @@
 				4EFD548D1A6F217900FCFB7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
