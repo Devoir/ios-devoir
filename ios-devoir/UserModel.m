@@ -144,4 +144,60 @@
     return [email lowercaseString];
 }
 
+- (int) addUserWithFirstName:(NSString *)firstName LastName:(NSString *)lastName Email:(NSString *)email
+{
+    NSString* dbPath = [[[NSBundle mainBundle] resourcePath ]stringByAppendingPathComponent:dbName];
+    
+    sqlite3* db = NULL;
+    int rc=0;
+    rc = sqlite3_open_v2([dbPath cStringUsingEncoding:NSUTF8StringEncoding], &db, SQLITE_OPEN_READWRITE , NULL);
+    if (SQLITE_OK != rc)
+    {
+        sqlite3_close(db);
+        NSLog(@"Failed to open db connection");
+    }
+    else
+    {
+        NSString * query  = [NSString
+                             stringWithFormat:@"INSERT INTO User (FirstName, LastName, Email) VALUES (\"%@\",\"%@\",\"%@\")",
+                             firstName, lastName, email];
+        
+        //NSLog(@"QUERY: %@", query);
+        char * errMsg;
+        rc = sqlite3_exec(db, [query UTF8String] ,NULL,NULL,&errMsg);
+        if(SQLITE_OK != rc)
+        {
+            NSLog(@"Failed to insert record  rc:%d, msg=%s",rc,errMsg);
+        }
+        sqlite3_close(db);
+    }
+    
+    return rc;
+}
+
+- (void) removeUser
+{
+    NSString* dbPath = [[[NSBundle mainBundle] resourcePath ]stringByAppendingPathComponent:dbName];
+    
+    sqlite3* db = NULL;
+    int rc=0;
+    rc = sqlite3_open_v2([dbPath cStringUsingEncoding:NSUTF8StringEncoding], &db, SQLITE_OPEN_READWRITE , NULL);
+    if (SQLITE_OK != rc)
+    {
+        sqlite3_close(db);
+        NSLog(@"Failed to open db connection");
+    }
+    else
+    {
+        NSString * query  = [NSString stringWithFormat:@"DELETE FROM User"];
+        char * errMsg;
+        rc = sqlite3_exec(db, [query UTF8String] ,NULL,NULL,&errMsg);
+        if(SQLITE_OK != rc)
+        {
+            NSLog(@"Failed to delete record  rc:%d, msg=%s",rc,errMsg);
+        }
+        sqlite3_close(db);
+    }
+}
+
 @end

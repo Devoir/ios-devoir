@@ -26,28 +26,27 @@
     [super tearDown];
 }
 
-- (void)testGetFirstName {
+- (void)testUserModel
+{
     UserModel* userModel = [[UserModel alloc] initWithDatabase:@"devoirTest.sqlite"];
+    UserModel* failModel = [[UserModel alloc] initWithDatabase:@"NONE"];
+
+    [userModel addUserWithFirstName:@"Alexandre" LastName:@"Dumas" Email:@"thecount@montecristo.com"];
+    
     XCTAssertEqualObjects([userModel getFirstName], @"Alexandre");
-    
-    UserModel* failModel = [[UserModel alloc] initWithDatabase:@"NONE"];
     XCTAssertEqualObjects([failModel getFirstName], NULL);
-}
-
-- (void)testGetLastName {
-    UserModel* userModel = [[UserModel alloc] initWithDatabase:@"devoirTest.sqlite"];
+    
     XCTAssertEqualObjects([userModel getLastName], @"Dumas");
-    
-    UserModel* failModel = [[UserModel alloc] initWithDatabase:@"NONE"];
     XCTAssertEqualObjects([failModel getLastName], NULL);
-}
-
-- (void)testGetEmail {
-    UserModel* userModel = [[UserModel alloc] initWithDatabase:@"devoirTest.sqlite"];
-    XCTAssertEqualObjects([userModel getEmail], @"thecount@montecristo.com");
     
-    UserModel* failModel = [[UserModel alloc] initWithDatabase:@"NONE"];
+    XCTAssertEqualObjects([userModel getEmail], @"thecount@montecristo.com");
     XCTAssertEqualObjects([failModel getEmail], NULL);
+    
+    [userModel removeUser];
+    
+    XCTAssertEqualObjects([userModel getFirstName], NULL);
+    XCTAssertEqualObjects([userModel getLastName], NULL);
+    XCTAssertEqualObjects([userModel getEmail], NULL);
 }
 
 @end

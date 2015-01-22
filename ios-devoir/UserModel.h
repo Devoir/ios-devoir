@@ -15,9 +15,13 @@
 
 - (id) init;
 - (id) initWithDatabase:(NSString*)db;
+
 - (NSString*) getFirstName;
 - (NSString*) getLastName;
 - (NSString*) getEmail;
+
+- (int) addUserWithFirstName:(NSString*)firstName LastName:(NSString*)lastName Email:(NSString*)email;
+- (void) removeUser;
 
 
 @end
