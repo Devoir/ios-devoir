@@ -106,7 +106,7 @@
     return [email lowercaseString];
 }
 
-- (NSString*) getUserImageUrl
+- (NSString*) getOAuthToken
 {
     NSString* userImageUrl = NULL;
     NSString* dbPath = [[[NSBundle mainBundle] resourcePath ]stringByAppendingPathComponent:dbName];
@@ -122,7 +122,7 @@
     }
     else
     {
-        NSString  * query = @"SELECT UserImageUrl from User";
+        NSString  * query = @"SELECT OAuthToken from User";
         
         rc =sqlite3_prepare_v2(db, [query UTF8String], -1, &stmt, NULL);
         if(rc == SQLITE_OK)
@@ -144,7 +144,45 @@
     return userImageUrl;
 }
 
-- (int) addUserWithDisplayName:(NSString *)displayName Email:(NSString *)email UserImageUrl:(NSString *)userImageUrl
+- (int) getUserID
+{
+    int userID = -1;
+    NSString* dbPath = [[[NSBundle mainBundle] resourcePath ]stringByAppendingPathComponent:dbName];
+    
+    sqlite3* db = NULL;
+    sqlite3_stmt* stmt =NULL;
+    int rc=0;
+    rc = sqlite3_open_v2([dbPath UTF8String], &db, SQLITE_OPEN_READONLY , NULL);
+    if (SQLITE_OK != rc)
+    {
+        sqlite3_close(db);
+        NSLog(@"Failed to open db connection");
+    }
+    else
+    {
+        NSString  * query = @"SELECT UserID from User";
+        
+        rc =sqlite3_prepare_v2(db, [query UTF8String], -1, &stmt, NULL);
+        if(rc == SQLITE_OK)
+        {
+            while (sqlite3_step(stmt) == SQLITE_ROW)
+            {
+                
+                userID = sqlite3_column_int(stmt, 0);
+            }
+            sqlite3_finalize(stmt);
+        }
+        else
+        {
+            NSLog(@"Failed to prepare statement with rc:%d",rc);
+        }
+        sqlite3_close(db);
+    }
+    
+    return userID;
+}
+
+- (int) addUserWithDisplayName:(NSString *)displayName Email:(NSString *)email OAuthToken:(NSString *)oAuthToken UserID:(int)userID
 {
     NSString* dbPath = [[[NSBundle mainBundle] resourcePath ]stringByAppendingPathComponent:dbName];
     
@@ -159,8 +197,8 @@
     else
     {
         NSString * query  = [NSString
-                             stringWithFormat:@"INSERT INTO User (DisplayName, Email, UserImageUrl) VALUES (\"%@\",\"%@\",\"%@\")",
-                             displayName, email, userImageUrl];
+                             stringWithFormat:@"INSERT INTO User (DisplayName, Email, OAuthToken, UserID) VALUES (\"%@\",\"%@\",\"%@\",%d)",
+                             displayName, email, oAuthToken, userID];
         
         //NSLog(@"QUERY: %@", query);
         char * errMsg;

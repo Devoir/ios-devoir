@@ -19,10 +19,11 @@
 
 - (NSString*) getDisplayName;
 - (NSString*) getEmail;
-- (NSString*) getUserImageUrl;
+- (NSString*) getOAuthToken;
+- (int) getUserID;
 
 
-- (int) addUserWithDisplayName:(NSString*)displayName Email:(NSString*)email UserImageUrl:(NSString*)userImageUrl;
+- (int) addUserWithDisplayName:(NSString*)displayName Email:(NSString*)email OAuthToken:(NSString*)oAuthToken UserID:(int)userID;
 - (void) removeUser;
 
 

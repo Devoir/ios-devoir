@@ -31,7 +31,7 @@
     UserModel* userModel = [[UserModel alloc] initWithDatabase:@"devoir.sqlite"];
     UserModel* failModel = [[UserModel alloc] initWithDatabase:@"NONE"];
 
-    [userModel addUserWithDisplayName:@"Alexandre Dumas" Email:@"TheCount@MonteCristo.com" UserImageUrl:@"http://EdmondDants.com/image"];
+    [userModel addUserWithDisplayName:@"Alexandre Dumas" Email:@"TheCount@MonteCristo.com" OAuthToken:@"OAUTH-TOKEN" UserID: 5];
     
     XCTAssertEqualObjects([userModel getDisplayName], @"Alexandre Dumas");
     XCTAssertEqualObjects([failModel getDisplayName], NULL);
@@ -39,14 +39,18 @@
     XCTAssertEqualObjects([userModel getEmail], @"thecount@montecristo.com");
     XCTAssertEqualObjects([failModel getEmail], NULL);
     
-    XCTAssertEqualObjects([userModel getUserImageUrl], @"http://EdmondDants.com/image");
-    XCTAssertEqualObjects([failModel getUserImageUrl], NULL);
+    XCTAssertEqualObjects([userModel getOAuthToken], @"OAUTH-TOKEN");
+    XCTAssertEqualObjects([failModel getOAuthToken], NULL);
+    
+    XCTAssertEqual([userModel getUserID], 5);
+    XCTAssertEqual([failModel getUserID], -1);
     
     [userModel removeUser];
     
     XCTAssertEqualObjects([userModel getDisplayName], NULL);
     XCTAssertEqualObjects([userModel getEmail], NULL);
-    XCTAssertEqualObjects([userModel getUserImageUrl], NULL);
+    XCTAssertEqualObjects([userModel getOAuthToken], NULL);
+    XCTAssertEqual([failModel getUserID], -1);
 }
 
 @end

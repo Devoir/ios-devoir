@@ -20,7 +20,7 @@
     self.nameTextField.enabled = NO;
     self.emailTextField.text = [userModel getEmail];
     self.emailTextField.enabled = NO;
-    self.imageTextField.text = [userModel getUserImageUrl];
+    self.imageTextField.text = [userModel getOAuthToken];
     self.imageTextField.enabled = NO;
 }
 

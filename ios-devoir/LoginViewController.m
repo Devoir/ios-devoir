@@ -79,12 +79,12 @@
                     else
                     {
                         //add user into database
-                        NSString* name = [NSString stringWithFormat: @"%@", person.displayName];
-                        NSString* email = signIn.authentication.userEmail;
-                        NSMutableDictionary* imageJson = [person.image JSON];
-                        NSString* image = imageJson[@"url"];
-                        UserModel* userModel = [[UserModel alloc] init];
-                        [userModel addUserWithDisplayName:name Email:email UserImageUrl:image];
+                        //NSString* name = [NSString stringWithFormat: @"%@", person.displayName];
+                        //NSString* email = signIn.authentication.userEmail;
+                        //NSMutableDictionary* imageJson = [person.image JSON];
+                        //NSString* image = imageJson[@"url"];
+                        //UserModel* userModel = [[UserModel alloc] init];
+                        //[userModel addUserWithDisplayName:name Email:email OAuthToken:image];
                         
                         [self refreshInterfaceBasedOnSignIn];
                     }
