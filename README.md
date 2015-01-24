@@ -6,4 +6,4 @@ After **cocoapods** is installed, go to the directory and run
 
     $ pod install
 
-From then on only open the project using the .xcworkspace file (ios-devoir.xcworkspace)
+Only open the project using the .xcworkspace file (ios-devoir.xcworkspace)
