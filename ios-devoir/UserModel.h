@@ -16,11 +16,12 @@
 - (id) init;
 - (id) initWithDatabase:(NSString*)db;
 
-- (NSString*) getFirstName;
-- (NSString*) getLastName;
+- (NSString*) getDisplayName;
 - (NSString*) getEmail;
+- (NSString*) getUserImageUrl;
 
-- (int) addUserWithFirstName:(NSString*)firstName LastName:(NSString*)lastName Email:(NSString*)email;
+
+- (int) addUserWithDisplayName:(NSString*)displayName Email:(NSString*)email UserImageUrl:(NSString*)userImageUrl;
 - (void) removeUser;
 
 

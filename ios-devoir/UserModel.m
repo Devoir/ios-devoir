@@ -30,9 +30,9 @@
     return self;
 }
 
-- (NSString*) getFirstName
+- (NSString*) getDisplayName
 {
-    NSString* firstName = NULL;
+    NSString* displayName = NULL;
     NSString* dbPath = [[[NSBundle mainBundle] resourcePath ]stringByAppendingPathComponent:dbName];
     
     sqlite3* db = NULL;
@@ -46,7 +46,7 @@
     }
     else
     {
-        NSString  * query = @"SELECT FirstName from User";
+        NSString  * query = @"SELECT DisplayName from User";
         
         rc =sqlite3_prepare_v2(db, [query UTF8String], -1, &stmt, NULL);
         if(rc == SQLITE_OK)
@@ -54,7 +54,7 @@
             while (sqlite3_step(stmt) == SQLITE_ROW)
             {
                 
-                firstName = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 0)];
+                displayName = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 0)];
             }
             sqlite3_finalize(stmt);
         }
@@ -65,45 +65,7 @@
         sqlite3_close(db);
     }
     
-    return firstName;
-}
-
-- (NSString*) getLastName
-{
-    NSString* lastName = NULL;
-    NSString* dbPath = [[[NSBundle mainBundle] resourcePath ]stringByAppendingPathComponent:dbName];
-    
-    sqlite3* db = NULL;
-    sqlite3_stmt* stmt =NULL;
-    int rc=0;
-    rc = sqlite3_open_v2([dbPath UTF8String], &db, SQLITE_OPEN_READONLY , NULL);
-    if (SQLITE_OK != rc)
-    {
-        sqlite3_close(db);
-        NSLog(@"Failed to open db connection");
-    }
-    else
-    {
-        NSString  * query = @"SELECT LastName from User";
-        
-        rc =sqlite3_prepare_v2(db, [query UTF8String], -1, &stmt, NULL);
-        if(rc == SQLITE_OK)
-        {
-            while (sqlite3_step(stmt) == SQLITE_ROW)
-            {
-                
-                lastName = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 0)];
-            }
-            sqlite3_finalize(stmt);
-        }
-        else
-        {
-            NSLog(@"Failed to prepare statement with rc:%d",rc);
-        }
-        sqlite3_close(db);
-    }
-    
-    return lastName;
+    return displayName;
 }
 
 - (NSString*) getEmail
@@ -144,7 +106,45 @@
     return [email lowercaseString];
 }
 
-- (int) addUserWithFirstName:(NSString *)firstName LastName:(NSString *)lastName Email:(NSString *)email
+- (NSString*) getUserImageUrl
+{
+    NSString* userImageUrl = NULL;
+    NSString* dbPath = [[[NSBundle mainBundle] resourcePath ]stringByAppendingPathComponent:dbName];
+    
+    sqlite3* db = NULL;
+    sqlite3_stmt* stmt =NULL;
+    int rc=0;
+    rc = sqlite3_open_v2([dbPath UTF8String], &db, SQLITE_OPEN_READONLY , NULL);
+    if (SQLITE_OK != rc)
+    {
+        sqlite3_close(db);
+        NSLog(@"Failed to open db connection");
+    }
+    else
+    {
+        NSString  * query = @"SELECT UserImageUrl from User";
+        
+        rc =sqlite3_prepare_v2(db, [query UTF8String], -1, &stmt, NULL);
+        if(rc == SQLITE_OK)
+        {
+            while (sqlite3_step(stmt) == SQLITE_ROW)
+            {
+                
+                userImageUrl = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 0)];
+            }
+            sqlite3_finalize(stmt);
+        }
+        else
+        {
+            NSLog(@"Failed to prepare statement with rc:%d",rc);
+        }
+        sqlite3_close(db);
+    }
+    
+    return userImageUrl;
+}
+
+- (int) addUserWithDisplayName:(NSString *)displayName Email:(NSString *)email UserImageUrl:(NSString *)userImageUrl
 {
     NSString* dbPath = [[[NSBundle mainBundle] resourcePath ]stringByAppendingPathComponent:dbName];
     
@@ -159,8 +159,8 @@
     else
     {
         NSString * query  = [NSString
-                             stringWithFormat:@"INSERT INTO User (FirstName, LastName, Email) VALUES (\"%@\",\"%@\",\"%@\")",
-                             firstName, lastName, email];
+                             stringWithFormat:@"INSERT INTO User (DisplayName, Email, UserImageUrl) VALUES (\"%@\",\"%@\",\"%@\")",
+                             displayName, email, userImageUrl];
         
         //NSLog(@"QUERY: %@", query);
         char * errMsg;

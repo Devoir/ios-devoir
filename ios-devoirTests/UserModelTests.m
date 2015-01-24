@@ -31,22 +31,22 @@
     UserModel* userModel = [[UserModel alloc] initWithDatabase:@"devoirTest.sqlite"];
     UserModel* failModel = [[UserModel alloc] initWithDatabase:@"NONE"];
 
-    [userModel addUserWithFirstName:@"Alexandre" LastName:@"Dumas" Email:@"thecount@montecristo.com"];
+    [userModel addUserWithDisplayName:@"Alexandre Dumas" Email:@"TheCount@MonteCristo.com" UserImageUrl:@"http://EdmondDants.com/image"];
     
-    XCTAssertEqualObjects([userModel getFirstName], @"Alexandre");
-    XCTAssertEqualObjects([failModel getFirstName], NULL);
-    
-    XCTAssertEqualObjects([userModel getLastName], @"Dumas");
-    XCTAssertEqualObjects([failModel getLastName], NULL);
+    XCTAssertEqualObjects([userModel getDisplayName], @"Alexandre Dumas");
+    XCTAssertEqualObjects([failModel getDisplayName], NULL);
     
     XCTAssertEqualObjects([userModel getEmail], @"thecount@montecristo.com");
     XCTAssertEqualObjects([failModel getEmail], NULL);
     
+    XCTAssertEqualObjects([userModel getUserImageUrl], @"http://EdmondDants.com/image");
+    XCTAssertEqualObjects([failModel getUserImageUrl], NULL);
+    
     [userModel removeUser];
     
-    XCTAssertEqualObjects([userModel getFirstName], NULL);
-    XCTAssertEqualObjects([userModel getLastName], NULL);
+    XCTAssertEqualObjects([userModel getDisplayName], NULL);
     XCTAssertEqualObjects([userModel getEmail], NULL);
+    XCTAssertEqualObjects([userModel getUserImageUrl], NULL);
 }
 
 @end
