@@ -12,6 +12,8 @@
 #import "Constants.h"
 #import "UserModel.h"
 
+#import "FakeServer.h"
+
 @class GPPSignInButton;
 
 @interface LoginViewController : UIViewController <GPPSignInDelegate>
@@ -22,7 +24,8 @@
 @property (weak, nonatomic) GPPSignIn* signIn;
 
 -(void)refreshInterfaceBasedOnSignIn;
-- (void)finishedWithAuth:(GTMOAuth2Authentication *)auth error:(NSError *)error;
+-(void)finishedWithAuth:(GTMOAuth2Authentication *)auth error:(NSError *)error;
+-(NSDictionary*)parseLoginResponse:(NSString*)response;
 
 
 @end

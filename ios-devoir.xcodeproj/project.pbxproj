@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E1DA3981A745761003F9F1D /* FakeServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1DA3971A745761003F9F1D /* FakeServer.m */; };
 		4EA9D92D1A73503300F942F9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA9D92C1A73503300F942F9 /* LoginViewController.m */; };
 		4EA9D9301A735AB000F942F9 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA9D92F1A735AB000F942F9 /* Constants.m */; };
 		4EA9D9331A73691200F942F9 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA9D9321A73691200F942F9 /* TestViewController.m */; };
@@ -36,6 +37,8 @@
 /* Begin PBXFileReference section */
 		0D3105400CA35C02BDDA00A1 /* Pods-ios-devoir.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-devoir.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-devoir/Pods-ios-devoir.debug.xcconfig"; sourceTree = "<group>"; };
 		1C16CC9996081AB2164A5216 /* Pods-ios-devoir.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-devoir.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-devoir/Pods-ios-devoir.release.xcconfig"; sourceTree = "<group>"; };
+		4E1DA3961A745761003F9F1D /* FakeServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeServer.h; sourceTree = "<group>"; };
+		4E1DA3971A745761003F9F1D /* FakeServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeServer.m; sourceTree = "<group>"; };
 		4EA9D92B1A73503300F942F9 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		4EA9D92C1A73503300F942F9 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		4EA9D92E1A735AB000F942F9 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -149,6 +152,8 @@
 				4EFD546A1A6F217900FCFB7C /* main.m */,
 				4EA9D92E1A735AB000F942F9 /* Constants.h */,
 				4EA9D92F1A735AB000F942F9 /* Constants.m */,
+				4E1DA3961A745761003F9F1D /* FakeServer.h */,
+				4E1DA3971A745761003F9F1D /* FakeServer.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -371,6 +376,7 @@
 				4EFD546E1A6F217900FCFB7C /* AppDelegate.m in Sources */,
 				4EFD546B1A6F217900FCFB7C /* main.m in Sources */,
 				4EB0840F1A6F392000FD5031 /* UserModel.m in Sources */,
+				4E1DA3981A745761003F9F1D /* FakeServer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

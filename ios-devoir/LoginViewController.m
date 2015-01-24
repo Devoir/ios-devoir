@@ -62,34 +62,29 @@
     }
     else
     {
-        GTLServicePlus* plusService = [[GTLServicePlus alloc] init];
-        plusService.retryEnabled = YES;
-        [plusService setAuthorizer:auth];
+        //TRY TO LOGIN ON SERVER
+        NSString* loginResponse = [[FakeServer sharedFakeServer] sendLoginRequestOAuthToken:[auth accessToken]];
+        NSDictionary* loginJson = [self parseLoginResponse:loginResponse];
         
-        GTLQueryPlus *query = [GTLQueryPlus queryForPeopleGetWithUserId:@"me"];
-        
-        [plusService executeQuery:query
-                completionHandler:^(GTLServiceTicket *ticket,
-                                    GTLPlusPerson *person,
-                                    NSError *error) {
-                    if (error)
-                    {
-                        GTMLoggerError(@"Error: %@", error);
-                    }
-                    else
-                    {
-                        //add user into database
-                        //NSString* name = [NSString stringWithFormat: @"%@", person.displayName];
-                        //NSString* email = signIn.authentication.userEmail;
-                        //NSMutableDictionary* imageJson = [person.image JSON];
-                        //NSString* image = imageJson[@"url"];
-                        //UserModel* userModel = [[UserModel alloc] init];
-                        //[userModel addUserWithDisplayName:name Email:email OAuthToken:image];
-                        
-                        [self refreshInterfaceBasedOnSignIn];
-                    }
-                }];
+        //add user into database
+        UserModel* userModel = [[UserModel alloc] init];
+        [userModel addUserWithDisplayName:(NSString*)loginJson[@"DisplayName"]
+                                    Email:(NSString*)loginJson[@"Email"]
+                               OAuthToken:(NSString*)loginJson[@"OAuthToken"]
+                                   UserID:(int)loginJson[@"UserID"]];
+        [self refreshInterfaceBasedOnSignIn];
     }
+}
+
+-(NSDictionary*)parseLoginResponse:(NSString *)response
+{
+    NSData* data = [response dataUsingEncoding:NSUTF8StringEncoding];
+    NSError* error = [[NSError alloc] init];
+    NSDictionary* jsonData = [NSJSONSerialization
+                         JSONObjectWithData:data
+                         options:NSJSONReadingMutableContainers
+                         error:&error];
+    return jsonData;
 }
 
 @end
