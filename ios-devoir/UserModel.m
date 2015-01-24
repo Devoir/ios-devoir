@@ -16,7 +16,7 @@
 {
     if ((self = [super init]))
     {
-        dbName = @"devoir.sqlite";
+        dbName = DB_NAME;
     }
     return self;
 }

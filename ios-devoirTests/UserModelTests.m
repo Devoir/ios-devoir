@@ -28,7 +28,7 @@
 
 - (void)testUserModel
 {
-    UserModel* userModel = [[UserModel alloc] initWithDatabase:@"devoirTest.sqlite"];
+    UserModel* userModel = [[UserModel alloc] initWithDatabase:@"devoir.sqlite"];
     UserModel* failModel = [[UserModel alloc] initWithDatabase:@"NONE"];
 
     [userModel addUserWithDisplayName:@"Alexandre Dumas" Email:@"TheCount@MonteCristo.com" UserImageUrl:@"http://EdmondDants.com/image"];

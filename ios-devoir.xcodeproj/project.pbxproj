@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EA9D92D1A73503300F942F9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA9D92C1A73503300F942F9 /* LoginViewController.m */; };
+		4EA9D9301A735AB000F942F9 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA9D92F1A735AB000F942F9 /* Constants.m */; };
+		4EA9D9331A73691200F942F9 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA9D9321A73691200F942F9 /* TestViewController.m */; };
 		4EB0840F1A6F392000FD5031 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB0840E1A6F392000FD5031 /* UserModel.m */; };
 		4EFD546B1A6F217900FCFB7C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFD546A1A6F217900FCFB7C /* main.m */; };
 		4EFD546E1A6F217900FCFB7C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFD546D1A6F217900FCFB7C /* AppDelegate.m */; };
@@ -15,7 +18,9 @@
 		4EFD54791A6F217900FCFB7C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EFD54771A6F217900FCFB7C /* LaunchScreen.xib */; };
 		4EFD54851A6F217900FCFB7C /* UserModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFD54841A6F217900FCFB7C /* UserModelTests.m */; };
 		4EFD548F1A6F295A00FCFB7C /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EFD548E1A6F295A00FCFB7C /* libsqlite3.0.dylib */; };
-		4EFD54911A6F314800FCFB7C /* devoirTest.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 4EFD54901A6F314800FCFB7C /* devoirTest.sqlite */; };
+		4EFD54911A6F314800FCFB7C /* devoir.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 4EFD54901A6F314800FCFB7C /* devoir.sqlite */; };
+		C0F99D53BAF4945342C1B92D /* libPods-ios-devoirTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83748BCADD6246FDA2D241BB /* libPods-ios-devoirTests.a */; };
+		E91DF9361289CF21FBFDE3C1 /* libPods-ios-devoir.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72689F7367F1E7DE9E7196D1 /* libPods-ios-devoir.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D3105400CA35C02BDDA00A1 /* Pods-ios-devoir.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-devoir.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-devoir/Pods-ios-devoir.debug.xcconfig"; sourceTree = "<group>"; };
+		1C16CC9996081AB2164A5216 /* Pods-ios-devoir.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-devoir.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-devoir/Pods-ios-devoir.release.xcconfig"; sourceTree = "<group>"; };
+		4EA9D92B1A73503300F942F9 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		4EA9D92C1A73503300F942F9 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		4EA9D92E1A735AB000F942F9 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		4EA9D92F1A735AB000F942F9 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		4EA9D9311A73691200F942F9 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		4EA9D9321A73691200F942F9 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		4EB0840D1A6F392000FD5031 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		4EB0840E1A6F392000FD5031 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		4EFD54651A6F217900FCFB7C /* ios-devoir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-devoir.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,7 +56,11 @@
 		4EFD54831A6F217900FCFB7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EFD54841A6F217900FCFB7C /* UserModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModelTests.m; sourceTree = "<group>"; };
 		4EFD548E1A6F295A00FCFB7C /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
-		4EFD54901A6F314800FCFB7C /* devoirTest.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = devoirTest.sqlite; sourceTree = "<group>"; };
+		4EFD54901A6F314800FCFB7C /* devoir.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = devoir.sqlite; sourceTree = "<group>"; };
+		72689F7367F1E7DE9E7196D1 /* libPods-ios-devoir.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ios-devoir.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83748BCADD6246FDA2D241BB /* libPods-ios-devoirTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ios-devoirTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A32F2B07FA4C7573DDAC51B5 /* Pods-ios-devoirTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-devoirTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-devoirTests/Pods-ios-devoirTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A9968A7345C43F2C85D5A1EF /* Pods-ios-devoirTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-devoirTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-devoirTests/Pods-ios-devoirTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +69,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EFD548F1A6F295A00FCFB7C /* libsqlite3.0.dylib in Frameworks */,
+				E91DF9361289CF21FBFDE3C1 /* libPods-ios-devoir.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,16 +77,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0F99D53BAF4945342C1B92D /* libPods-ios-devoirTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AA665F54D4C463C42F321BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0D3105400CA35C02BDDA00A1 /* Pods-ios-devoir.debug.xcconfig */,
+				1C16CC9996081AB2164A5216 /* Pods-ios-devoir.release.xcconfig */,
+				A32F2B07FA4C7573DDAC51B5 /* Pods-ios-devoirTests.debug.xcconfig */,
+				A9968A7345C43F2C85D5A1EF /* Pods-ios-devoirTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4EB084111A6F4DE600FD5031 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				4EFD548E1A6F295A00FCFB7C /* libsqlite3.0.dylib */,
+				72689F7367F1E7DE9E7196D1 /* libPods-ios-devoir.a */,
+				83748BCADD6246FDA2D241BB /* libPods-ios-devoirTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -80,6 +112,7 @@
 				4EFD54811A6F217900FCFB7C /* ios-devoirTests */,
 				4EB084111A6F4DE600FD5031 /* Frameworks */,
 				4EFD54661A6F217900FCFB7C /* Products */,
+				0AA665F54D4C463C42F321BB /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,7 +136,7 @@
 				4EFD54931A6F327800FCFB7C /* Views */,
 				4EFD54941A6F328800FCFB7C /* Controllers */,
 				4EFD54681A6F217900FCFB7C /* Supporting Files */,
-				4EFD54901A6F314800FCFB7C /* devoirTest.sqlite */,
+				4EFD54901A6F314800FCFB7C /* devoir.sqlite */,
 				4EFD54751A6F217900FCFB7C /* Images.xcassets */,
 			);
 			path = "ios-devoir";
@@ -114,6 +147,8 @@
 			children = (
 				4EFD54691A6F217900FCFB7C /* Info.plist */,
 				4EFD546A1A6F217900FCFB7C /* main.m */,
+				4EA9D92E1A735AB000F942F9 /* Constants.h */,
+				4EA9D92F1A735AB000F942F9 /* Constants.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -154,6 +189,10 @@
 		4EFD54941A6F328800FCFB7C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4EA9D92B1A73503300F942F9 /* LoginViewController.h */,
+				4EA9D92C1A73503300F942F9 /* LoginViewController.m */,
+				4EA9D9311A73691200F942F9 /* TestViewController.h */,
+				4EA9D9321A73691200F942F9 /* TestViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -165,9 +204,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EFD54881A6F217900FCFB7C /* Build configuration list for PBXNativeTarget "ios-devoir" */;
 			buildPhases = (
+				B0176F09EB790F4FF17270D9 /* Check Pods Manifest.lock */,
 				4EFD54611A6F217900FCFB7C /* Sources */,
 				4EFD54621A6F217900FCFB7C /* Frameworks */,
 				4EFD54631A6F217900FCFB7C /* Resources */,
+				9AC31FEFA3BE733D36A78E1C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,9 +223,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EFD548B1A6F217900FCFB7C /* Build configuration list for PBXNativeTarget "ios-devoirTests" */;
 			buildPhases = (
+				F1007F167E6315A5C35E6B66 /* Check Pods Manifest.lock */,
 				4EFD547A1A6F217900FCFB7C /* Sources */,
 				4EFD547B1A6F217900FCFB7C /* Frameworks */,
 				4EFD547C1A6F217900FCFB7C /* Resources */,
+				E1F9B5BD405A28EBA5294860 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -240,7 +283,7 @@
 			files = (
 				4EFD54741A6F217900FCFB7C /* Main.storyboard in Resources */,
 				4EFD54791A6F217900FCFB7C /* LaunchScreen.xib in Resources */,
-				4EFD54911A6F314800FCFB7C /* devoirTest.sqlite in Resources */,
+				4EFD54911A6F314800FCFB7C /* devoir.sqlite in Resources */,
 				4EFD54761A6F217900FCFB7C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,11 +297,77 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9AC31FEFA3BE733D36A78E1C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios-devoir/Pods-ios-devoir-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0176F09EB790F4FF17270D9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E1F9B5BD405A28EBA5294860 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios-devoirTests/Pods-ios-devoirTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1007F167E6315A5C35E6B66 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4EFD54611A6F217900FCFB7C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EA9D9331A73691200F942F9 /* TestViewController.m in Sources */,
+				4EA9D9301A735AB000F942F9 /* Constants.m in Sources */,
+				4EA9D92D1A73503300F942F9 /* LoginViewController.m in Sources */,
 				4EFD546E1A6F217900FCFB7C /* AppDelegate.m in Sources */,
 				4EFD546B1A6F217900FCFB7C /* main.m in Sources */,
 				4EB0840F1A6F392000FD5031 /* UserModel.m in Sources */,
@@ -381,6 +490,7 @@
 		};
 		4EFD54891A6F217900FCFB7C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D3105400CA35C02BDDA00A1 /* Pods-ios-devoir.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ios-devoir/Info.plist";
@@ -391,6 +501,7 @@
 		};
 		4EFD548A1A6F217900FCFB7C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C16CC9996081AB2164A5216 /* Pods-ios-devoir.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ios-devoir/Info.plist";
@@ -401,6 +512,7 @@
 		};
 		4EFD548C1A6F217900FCFB7C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A32F2B07FA4C7573DDAC51B5 /* Pods-ios-devoirTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -420,6 +532,7 @@
 		};
 		4EFD548D1A6F217900FCFB7C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9968A7345C43F2C85D5A1EF /* Pods-ios-devoirTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
