@@ -19,11 +19,6 @@
 - (id) initWithDatabase:(NSString*)db;
 
 - (User*) getUser;
-- (NSString*) getDisplayName;
-- (NSString*) getEmail;
-- (NSString*) getOAuthToken;
-- (int) getUserID;
-
 
 - (int) addUserWithDisplayName:(NSString*)displayName Email:(NSString*)email OAuthToken:(NSString*)oAuthToken UserID:(int)userID;
 - (void) removeUser;

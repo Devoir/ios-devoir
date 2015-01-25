@@ -32,166 +32,49 @@
 
 - (User*) getUser
 {
-    User* user = [[User alloc] init];
+    User* user = NULL;
     
-    [user setDisplayName:[self getDisplayName]];
-    [user setEmail:[self getEmail]];
-    [user setOAuthToken:[self getOAuthToken]];
-    [user setUserID:[self getUserID]];
+    NSString* dbPath = [[[NSBundle mainBundle] resourcePath ]stringByAppendingPathComponent:dbName];
+    
+    sqlite3* db = NULL;
+    sqlite3_stmt* stmt =NULL;
+    int rc=0;
+    rc = sqlite3_open_v2([dbPath UTF8String], &db, SQLITE_OPEN_READONLY , NULL);
+    if (SQLITE_OK != rc)
+    {
+        sqlite3_close(db);
+        NSLog(@"Failed to open db connection");
+    }
+    else
+    {
+        NSString  * query = [NSString stringWithFormat:@"SELECT * from User"];
+        
+        rc =sqlite3_prepare_v2(db, [query UTF8String], -1, &stmt, NULL);
+        if(rc == SQLITE_OK)
+        {
+            if (sqlite3_step(stmt) == SQLITE_ROW)
+            {
+                NSString* displayName = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 1)];
+                NSString* email = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 2)];
+                NSString* oAuthToken = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 3)];
+                int userID = sqlite3_column_int(stmt, 4);
+                
+                user = [[User alloc] init];
+                [user setDisplayName:displayName];
+                [user setEmail:email];
+                [user setOAuthToken:oAuthToken];
+                [user setUserID:userID];
+            }
+            sqlite3_finalize(stmt);
+        }
+        else
+        {
+            NSLog(@"Failed to prepare statement with rc:%d",rc);
+        }
+        sqlite3_close(db);
+    }
     
     return user;
-}
-
-- (NSString*) getDisplayName
-{
-    NSString* displayName = NULL;
-    NSString* dbPath = [[[NSBundle mainBundle] resourcePath ]stringByAppendingPathComponent:dbName];
-    
-    sqlite3* db = NULL;
-    sqlite3_stmt* stmt =NULL;
-    int rc=0;
-    rc = sqlite3_open_v2([dbPath UTF8String], &db, SQLITE_OPEN_READONLY , NULL);
-    if (SQLITE_OK != rc)
-    {
-        sqlite3_close(db);
-        NSLog(@"Failed to open db connection");
-    }
-    else
-    {
-        NSString  * query = @"SELECT DisplayName from User";
-        
-        rc =sqlite3_prepare_v2(db, [query UTF8String], -1, &stmt, NULL);
-        if(rc == SQLITE_OK)
-        {
-            while (sqlite3_step(stmt) == SQLITE_ROW)
-            {
-                
-                displayName = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 0)];
-            }
-            sqlite3_finalize(stmt);
-        }
-        else
-        {
-            NSLog(@"Failed to prepare statement with rc:%d",rc);
-        }
-        sqlite3_close(db);
-    }
-    
-    return displayName;
-}
-
-- (NSString*) getEmail
-{
-    NSString* email = NULL;
-    NSString* dbPath = [[[NSBundle mainBundle] resourcePath ]stringByAppendingPathComponent:dbName];
-    
-    sqlite3* db = NULL;
-    sqlite3_stmt* stmt =NULL;
-    int rc=0;
-    rc = sqlite3_open_v2([dbPath UTF8String], &db, SQLITE_OPEN_READONLY , NULL);
-    if (SQLITE_OK != rc)
-    {
-        sqlite3_close(db);
-        NSLog(@"Failed to open db connection");
-    }
-    else
-    {
-        NSString  * query = @"SELECT Email from User";
-        
-        rc =sqlite3_prepare_v2(db, [query UTF8String], -1, &stmt, NULL);
-        if(rc == SQLITE_OK)
-        {
-            while (sqlite3_step(stmt) == SQLITE_ROW)
-            {
-                
-                email = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 0)];
-            }
-            sqlite3_finalize(stmt);
-        }
-        else
-        {
-            NSLog(@"Failed to prepare statement with rc:%d",rc);
-        }
-        sqlite3_close(db);
-    }
-    
-    return [email lowercaseString];
-}
-
-- (NSString*) getOAuthToken
-{
-    NSString* userImageUrl = NULL;
-    NSString* dbPath = [[[NSBundle mainBundle] resourcePath ]stringByAppendingPathComponent:dbName];
-    
-    sqlite3* db = NULL;
-    sqlite3_stmt* stmt =NULL;
-    int rc=0;
-    rc = sqlite3_open_v2([dbPath UTF8String], &db, SQLITE_OPEN_READONLY , NULL);
-    if (SQLITE_OK != rc)
-    {
-        sqlite3_close(db);
-        NSLog(@"Failed to open db connection");
-    }
-    else
-    {
-        NSString  * query = @"SELECT OAuthToken from User";
-        
-        rc =sqlite3_prepare_v2(db, [query UTF8String], -1, &stmt, NULL);
-        if(rc == SQLITE_OK)
-        {
-            while (sqlite3_step(stmt) == SQLITE_ROW)
-            {
-                
-                userImageUrl = [NSString stringWithUTF8String:(const char *)sqlite3_column_text(stmt, 0)];
-            }
-            sqlite3_finalize(stmt);
-        }
-        else
-        {
-            NSLog(@"Failed to prepare statement with rc:%d",rc);
-        }
-        sqlite3_close(db);
-    }
-    
-    return userImageUrl;
-}
-
-- (int) getUserID
-{
-    int userID = -1;
-    NSString* dbPath = [[[NSBundle mainBundle] resourcePath ]stringByAppendingPathComponent:dbName];
-    
-    sqlite3* db = NULL;
-    sqlite3_stmt* stmt =NULL;
-    int rc=0;
-    rc = sqlite3_open_v2([dbPath UTF8String], &db, SQLITE_OPEN_READONLY , NULL);
-    if (SQLITE_OK != rc)
-    {
-        sqlite3_close(db);
-        NSLog(@"Failed to open db connection");
-    }
-    else
-    {
-        NSString  * query = @"SELECT UserID from User";
-        
-        rc =sqlite3_prepare_v2(db, [query UTF8String], -1, &stmt, NULL);
-        if(rc == SQLITE_OK)
-        {
-            while (sqlite3_step(stmt) == SQLITE_ROW)
-            {
-                
-                userID = sqlite3_column_int(stmt, 0);
-            }
-            sqlite3_finalize(stmt);
-        }
-        else
-        {
-            NSLog(@"Failed to prepare statement with rc:%d",rc);
-        }
-        sqlite3_close(db);
-    }
-    
-    return userID;
 }
 
 - (int) addUserWithDisplayName:(NSString *)displayName Email:(NSString *)email OAuthToken:(NSString *)oAuthToken UserID:(int)userID

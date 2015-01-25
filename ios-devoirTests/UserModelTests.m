@@ -33,24 +33,22 @@
 
     [userModel addUserWithDisplayName:@"Alexandre Dumas" Email:@"TheCount@MonteCristo.com" OAuthToken:@"OAUTH-TOKEN" UserID: 5];
     
-    XCTAssertEqualObjects([userModel getDisplayName], @"Alexandre Dumas");
-    XCTAssertEqualObjects([failModel getDisplayName], NULL);
+    //test bad database
+    User* user = [failModel getUser];
+    XCTAssertEqualObjects(user, NULL);
+
+    //test correct database with one user
+    user = [userModel getUser];
     
-    XCTAssertEqualObjects([userModel getEmail], @"thecount@montecristo.com");
-    XCTAssertEqualObjects([failModel getEmail], NULL);
+    XCTAssertEqualObjects([user displayName], @"Alexandre Dumas");
+    XCTAssertEqualObjects([user email], @"TheCount@MonteCristo.com");
+    XCTAssertEqualObjects([user oAuthToken], @"OAUTH-TOKEN");
+    XCTAssertEqual([user userID], 5);
     
-    XCTAssertEqualObjects([userModel getOAuthToken], @"OAUTH-TOKEN");
-    XCTAssertEqualObjects([failModel getOAuthToken], NULL);
-    
-    XCTAssertEqual([userModel getUserID], 5);
-    XCTAssertEqual([failModel getUserID], -1);
-    
+    //test remove user/empty database
     [userModel removeUser];
-    
-    XCTAssertEqualObjects([userModel getDisplayName], NULL);
-    XCTAssertEqualObjects([userModel getEmail], NULL);
-    XCTAssertEqualObjects([userModel getOAuthToken], NULL);
-    XCTAssertEqual([failModel getUserID], -1);
+    user = [userModel getUser];
+    XCTAssertEqualObjects(user, NULL);
 }
 
 @end
