@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <GooglePlus/GooglePlus.h>
 #import "UserModel.h"
-#import "User.h"
+//#import "User.h"
 
 @interface TestViewController : UIViewController
 

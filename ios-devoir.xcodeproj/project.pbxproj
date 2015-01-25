@@ -9,16 +9,19 @@
 /* Begin PBXBuildFile section */
 		4E1DA3981A745761003F9F1D /* FakeServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1DA3971A745761003F9F1D /* FakeServer.m */; };
 		4E1DA39C1A747CBC003F9F1D /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1DA39B1A747CBC003F9F1D /* UserModel.m */; };
+		4E1DA39F1A748734003F9F1D /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1DA39E1A748734003F9F1D /* Course.m */; };
 		4EA9D92D1A73503300F942F9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA9D92C1A73503300F942F9 /* LoginViewController.m */; };
 		4EA9D9301A735AB000F942F9 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA9D92F1A735AB000F942F9 /* Constants.m */; };
 		4EA9D9331A73691200F942F9 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA9D9321A73691200F942F9 /* TestViewController.m */; };
 		4EB0840F1A6F392000FD5031 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB0840E1A6F392000FD5031 /* User.m */; };
+		4EB61E721A74B50600449EF9 /* CourseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB61E711A74B50600449EF9 /* CourseModel.m */; };
+		4EB61E761A74C9F400449EF9 /* devoir-test.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 4EB61E751A74C9F400449EF9 /* devoir-test.sqlite */; };
 		4EFD546B1A6F217900FCFB7C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFD546A1A6F217900FCFB7C /* main.m */; };
 		4EFD546E1A6F217900FCFB7C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFD546D1A6F217900FCFB7C /* AppDelegate.m */; };
 		4EFD54741A6F217900FCFB7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EFD54721A6F217900FCFB7C /* Main.storyboard */; };
 		4EFD54761A6F217900FCFB7C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EFD54751A6F217900FCFB7C /* Images.xcassets */; };
 		4EFD54791A6F217900FCFB7C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EFD54771A6F217900FCFB7C /* LaunchScreen.xib */; };
-		4EFD54851A6F217900FCFB7C /* UserModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFD54841A6F217900FCFB7C /* UserModelTests.m */; };
+		4EFD54851A6F217900FCFB7C /* ModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFD54841A6F217900FCFB7C /* ModelTests.m */; };
 		4EFD548F1A6F295A00FCFB7C /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EFD548E1A6F295A00FCFB7C /* libsqlite3.0.dylib */; };
 		4EFD54911A6F314800FCFB7C /* devoir.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 4EFD54901A6F314800FCFB7C /* devoir.sqlite */; };
 		C0F99D53BAF4945342C1B92D /* libPods-ios-devoirTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83748BCADD6246FDA2D241BB /* libPods-ios-devoirTests.a */; };
@@ -42,6 +45,8 @@
 		4E1DA3971A745761003F9F1D /* FakeServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeServer.m; sourceTree = "<group>"; };
 		4E1DA39A1A747CBC003F9F1D /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		4E1DA39B1A747CBC003F9F1D /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		4E1DA39D1A748734003F9F1D /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
+		4E1DA39E1A748734003F9F1D /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
 		4EA9D92B1A73503300F942F9 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		4EA9D92C1A73503300F942F9 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		4EA9D92E1A735AB000F942F9 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -50,6 +55,9 @@
 		4EA9D9321A73691200F942F9 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		4EB0840D1A6F392000FD5031 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		4EB0840E1A6F392000FD5031 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		4EB61E701A74B50600449EF9 /* CourseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseModel.h; sourceTree = "<group>"; };
+		4EB61E711A74B50600449EF9 /* CourseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseModel.m; sourceTree = "<group>"; };
+		4EB61E751A74C9F400449EF9 /* devoir-test.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "devoir-test.sqlite"; sourceTree = "<group>"; };
 		4EFD54651A6F217900FCFB7C /* ios-devoir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-devoir.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EFD54691A6F217900FCFB7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EFD546A1A6F217900FCFB7C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,7 +68,7 @@
 		4EFD54781A6F217900FCFB7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4EFD547E1A6F217900FCFB7C /* ios-devoirTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-devoirTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EFD54831A6F217900FCFB7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4EFD54841A6F217900FCFB7C /* UserModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModelTests.m; sourceTree = "<group>"; };
+		4EFD54841A6F217900FCFB7C /* ModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelTests.m; sourceTree = "<group>"; };
 		4EFD548E1A6F295A00FCFB7C /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		4EFD54901A6F314800FCFB7C /* devoir.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = devoir.sqlite; sourceTree = "<group>"; };
 		72689F7367F1E7DE9E7196D1 /* libPods-ios-devoir.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ios-devoir.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,10 +142,10 @@
 		4EFD54671A6F217900FCFB7C /* ios-devoir */ = {
 			isa = PBXGroup;
 			children = (
-				4EFD54771A6F217900FCFB7C /* LaunchScreen.xib */,
-				4EFD54721A6F217900FCFB7C /* Main.storyboard */,
 				4EFD546C1A6F217900FCFB7C /* AppDelegate.h */,
 				4EFD546D1A6F217900FCFB7C /* AppDelegate.m */,
+				4EFD54901A6F314800FCFB7C /* devoir.sqlite */,
+				4EB61E751A74C9F400449EF9 /* devoir-test.sqlite */,
 				4EFD54921A6F326800FCFB7C /* Models */,
 				4EFD54931A6F327800FCFB7C /* Views */,
 				4EFD54941A6F328800FCFB7C /* Controllers */,
@@ -163,7 +171,7 @@
 		4EFD54811A6F217900FCFB7C /* ios-devoirTests */ = {
 			isa = PBXGroup;
 			children = (
-				4EFD54841A6F217900FCFB7C /* UserModelTests.m */,
+				4EFD54841A6F217900FCFB7C /* ModelTests.m */,
 				4EFD54821A6F217900FCFB7C /* Supporting Files */,
 			);
 			path = "ios-devoirTests";
@@ -180,7 +188,10 @@
 		4EFD54921A6F326800FCFB7C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4EFD54901A6F314800FCFB7C /* devoir.sqlite */,
+				4E1DA39D1A748734003F9F1D /* Course.h */,
+				4E1DA39E1A748734003F9F1D /* Course.m */,
+				4EB61E701A74B50600449EF9 /* CourseModel.h */,
+				4EB61E711A74B50600449EF9 /* CourseModel.m */,
 				4EB0840D1A6F392000FD5031 /* User.h */,
 				4EB0840E1A6F392000FD5031 /* User.m */,
 				4E1DA39A1A747CBC003F9F1D /* UserModel.h */,
@@ -192,6 +203,8 @@
 		4EFD54931A6F327800FCFB7C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4EFD54721A6F217900FCFB7C /* Main.storyboard */,
+				4EFD54771A6F217900FCFB7C /* LaunchScreen.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -293,6 +306,7 @@
 			files = (
 				4EFD54741A6F217900FCFB7C /* Main.storyboard in Resources */,
 				4EFD54791A6F217900FCFB7C /* LaunchScreen.xib in Resources */,
+				4EB61E761A74C9F400449EF9 /* devoir-test.sqlite in Resources */,
 				4EFD54911A6F314800FCFB7C /* devoir.sqlite in Resources */,
 				4EFD54761A6F217900FCFB7C /* Images.xcassets in Resources */,
 			);
@@ -377,8 +391,10 @@
 			files = (
 				4E1DA39C1A747CBC003F9F1D /* UserModel.m in Sources */,
 				4EA9D9331A73691200F942F9 /* TestViewController.m in Sources */,
+				4EB61E721A74B50600449EF9 /* CourseModel.m in Sources */,
 				4EA9D9301A735AB000F942F9 /* Constants.m in Sources */,
 				4EA9D92D1A73503300F942F9 /* LoginViewController.m in Sources */,
+				4E1DA39F1A748734003F9F1D /* Course.m in Sources */,
 				4EFD546E1A6F217900FCFB7C /* AppDelegate.m in Sources */,
 				4EFD546B1A6F217900FCFB7C /* main.m in Sources */,
 				4EB0840F1A6F392000FD5031 /* User.m in Sources */,
@@ -390,7 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EFD54851A6F217900FCFB7C /* UserModelTests.m in Sources */,
+				4EFD54851A6F217900FCFB7C /* ModelTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
