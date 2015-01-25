@@ -1,14 +1,15 @@
 //
-//  UserModel.h
+//  UserAccess.h
 //  ios-devoir
 //
-//  Created by Brent on 1/20/15.
+//  Created by Brent on 1/24/15.
 //  Copyright (c) 2015 Brent. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <sqlite3.h>
 #import "Constants.h"
+#import "User.h"
 
 @interface UserModel : NSObject
 
@@ -17,6 +18,7 @@
 - (id) init;
 - (id) initWithDatabase:(NSString*)db;
 
+- (User*) getUser;
 - (NSString*) getDisplayName;
 - (NSString*) getEmail;
 - (NSString*) getOAuthToken;
@@ -25,6 +27,5 @@
 
 - (int) addUserWithDisplayName:(NSString*)displayName Email:(NSString*)email OAuthToken:(NSString*)oAuthToken UserID:(int)userID;
 - (void) removeUser;
-
 
 @end

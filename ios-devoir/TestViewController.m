@@ -14,13 +14,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     userModel = [[UserModel alloc] init];
-    self.nameTextField.text = [userModel getDisplayName];
+    User* user = [userModel getUser];
+    self.nameTextField.text = [user displayName];
     self.nameTextField.enabled = NO;
-    self.emailTextField.text = [userModel getEmail];
+    self.emailTextField.text = [user email];
     self.emailTextField.enabled = NO;
-    self.imageTextField.text = [userModel getOAuthToken];
+    self.imageTextField.text = [user oAuthToken];
     self.imageTextField.enabled = NO;
 }
 

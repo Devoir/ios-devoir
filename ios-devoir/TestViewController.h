@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <GooglePlus/GooglePlus.h>
 #import "UserModel.h"
+#import "User.h"
 
 @interface TestViewController : UIViewController
 
@@ -18,8 +19,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *imageTextField;
 @property UserModel* userModel;
 
-- (IBAction)signOut:(id)sender;
-- (void)disconnect;
-- (void)didDisconnectWithError:(NSError *)error;
+- (IBAction) signOut:(id)sender;
+- (void) disconnect;
+- (void) didDisconnectWithError:(NSError *)error;
 
 @end

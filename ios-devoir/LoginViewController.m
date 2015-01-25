@@ -8,15 +8,16 @@
 
 #import "LoginViewController.h"
 
-@interface LoginViewController ()
-
-@end
-
 @implementation LoginViewController
-@synthesize signInButton, signIn;
+
+@synthesize signInButton;
+@synthesize signIn;
+@synthesize userModel;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    userModel = [[UserModel alloc] init];
     
     self.signOutButton.hidden = YES;
     
@@ -67,7 +68,6 @@
         NSDictionary* loginJson = [self parseLoginResponse:loginResponse];
         
         //add user into database
-        UserModel* userModel = [[UserModel alloc] init];
         [userModel addUserWithDisplayName:(NSString*)loginJson[@"DisplayName"]
                                     Email:(NSString*)loginJson[@"Email"]
                                OAuthToken:(NSString*)loginJson[@"OAuthToken"]

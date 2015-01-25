@@ -1,8 +1,8 @@
 //
-//  UserModel.m
+//  UserAccess.m
 //  ios-devoir
 //
-//  Created by Brent on 1/20/15.
+//  Created by Brent on 1/24/15.
 //  Copyright (c) 2015 Brent. All rights reserved.
 //
 
@@ -28,6 +28,18 @@
         dbName = db;
     }
     return self;
+}
+
+- (User*) getUser
+{
+    User* user = [[User alloc] init];
+    
+    [user setDisplayName:[self getDisplayName]];
+    [user setEmail:[self getEmail]];
+    [user setOAuthToken:[self getOAuthToken]];
+    [user setUserID:[self getUserID]];
+    
+    return user;
 }
 
 - (NSString*) getDisplayName

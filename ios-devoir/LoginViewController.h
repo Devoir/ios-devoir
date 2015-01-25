@@ -22,10 +22,11 @@
 @property (weak, nonatomic) IBOutlet UIButton* signOutButton;
 @property (weak, nonatomic) IBOutlet UILabel *signInLabel;
 @property (weak, nonatomic) GPPSignIn* signIn;
+@property UserModel* userModel;
 
--(void)refreshInterfaceBasedOnSignIn;
--(void)finishedWithAuth:(GTMOAuth2Authentication *)auth error:(NSError *)error;
--(NSDictionary*)parseLoginResponse:(NSString*)response;
+- (void) refreshInterfaceBasedOnSignIn;
+- (void) finishedWithAuth:(GTMOAuth2Authentication *)auth error:(NSError *)error;
+- (NSDictionary*) parseLoginResponse:(NSString*)response;
 
 
 @end

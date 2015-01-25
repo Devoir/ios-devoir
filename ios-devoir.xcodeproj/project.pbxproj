@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4E1DA3981A745761003F9F1D /* FakeServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1DA3971A745761003F9F1D /* FakeServer.m */; };
+		4E1DA39C1A747CBC003F9F1D /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1DA39B1A747CBC003F9F1D /* UserModel.m */; };
 		4EA9D92D1A73503300F942F9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA9D92C1A73503300F942F9 /* LoginViewController.m */; };
 		4EA9D9301A735AB000F942F9 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA9D92F1A735AB000F942F9 /* Constants.m */; };
 		4EA9D9331A73691200F942F9 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA9D9321A73691200F942F9 /* TestViewController.m */; };
-		4EB0840F1A6F392000FD5031 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB0840E1A6F392000FD5031 /* UserModel.m */; };
+		4EB0840F1A6F392000FD5031 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB0840E1A6F392000FD5031 /* User.m */; };
 		4EFD546B1A6F217900FCFB7C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFD546A1A6F217900FCFB7C /* main.m */; };
 		4EFD546E1A6F217900FCFB7C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFD546D1A6F217900FCFB7C /* AppDelegate.m */; };
 		4EFD54741A6F217900FCFB7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EFD54721A6F217900FCFB7C /* Main.storyboard */; };
@@ -39,14 +40,16 @@
 		1C16CC9996081AB2164A5216 /* Pods-ios-devoir.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-devoir.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-devoir/Pods-ios-devoir.release.xcconfig"; sourceTree = "<group>"; };
 		4E1DA3961A745761003F9F1D /* FakeServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeServer.h; sourceTree = "<group>"; };
 		4E1DA3971A745761003F9F1D /* FakeServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeServer.m; sourceTree = "<group>"; };
+		4E1DA39A1A747CBC003F9F1D /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		4E1DA39B1A747CBC003F9F1D /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		4EA9D92B1A73503300F942F9 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		4EA9D92C1A73503300F942F9 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		4EA9D92E1A735AB000F942F9 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		4EA9D92F1A735AB000F942F9 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		4EA9D9311A73691200F942F9 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		4EA9D9321A73691200F942F9 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
-		4EB0840D1A6F392000FD5031 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
-		4EB0840E1A6F392000FD5031 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		4EB0840D1A6F392000FD5031 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		4EB0840E1A6F392000FD5031 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		4EFD54651A6F217900FCFB7C /* ios-devoir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-devoir.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EFD54691A6F217900FCFB7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EFD546A1A6F217900FCFB7C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -139,7 +142,6 @@
 				4EFD54931A6F327800FCFB7C /* Views */,
 				4EFD54941A6F328800FCFB7C /* Controllers */,
 				4EFD54681A6F217900FCFB7C /* Supporting Files */,
-				4EFD54901A6F314800FCFB7C /* devoir.sqlite */,
 				4EFD54751A6F217900FCFB7C /* Images.xcassets */,
 			);
 			path = "ios-devoir";
@@ -178,8 +180,11 @@
 		4EFD54921A6F326800FCFB7C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4EB0840D1A6F392000FD5031 /* UserModel.h */,
-				4EB0840E1A6F392000FD5031 /* UserModel.m */,
+				4EFD54901A6F314800FCFB7C /* devoir.sqlite */,
+				4EB0840D1A6F392000FD5031 /* User.h */,
+				4EB0840E1A6F392000FD5031 /* User.m */,
+				4E1DA39A1A747CBC003F9F1D /* UserModel.h */,
+				4E1DA39B1A747CBC003F9F1D /* UserModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -370,12 +375,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E1DA39C1A747CBC003F9F1D /* UserModel.m in Sources */,
 				4EA9D9331A73691200F942F9 /* TestViewController.m in Sources */,
 				4EA9D9301A735AB000F942F9 /* Constants.m in Sources */,
 				4EA9D92D1A73503300F942F9 /* LoginViewController.m in Sources */,
 				4EFD546E1A6F217900FCFB7C /* AppDelegate.m in Sources */,
 				4EFD546B1A6F217900FCFB7C /* main.m in Sources */,
-				4EB0840F1A6F392000FD5031 /* UserModel.m in Sources */,
+				4EB0840F1A6F392000FD5031 /* User.m in Sources */,
 				4E1DA3981A745761003F9F1D /* FakeServer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
